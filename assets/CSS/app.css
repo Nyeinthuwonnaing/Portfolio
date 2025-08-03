@@ -1,0 +1,360 @@
+/* COMMON STYLE */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #F3F8F2;
+    --main-color: #7fbbd5;
+}
+
+body{
+    background: var(--bg-color);
+}
+
+#hero,
+#about,
+#skill,
+#service,
+#contace,
+#footer{
+    /* border: 1px solid orange; */
+    padding: 30px 0;
+}
+
+.heading{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.container{
+    /* border: 1px solid green; */
+    width: 65%;
+    margin: auto;
+}
+
+/* HERO STYLE */
+#hero .container{
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--main-color);
+    border: 5px solid #80A1C1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#hero .container .content{
+    flex-basis: 60%;
+    text-align: center;
+}
+
+#hero .container .content h3,
+#hero .container .content h1,
+#hero .container .content p{
+    margin-bottom: 20px;
+}
+
+#hero .container .content .social-icons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#hero .container .image{
+    flex-basis: 40%;
+    height: inherit;
+}
+
+#hero .container .image img{
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+}
+
+/* ABOUT STYLE */
+
+#about .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#about .container .content{
+    flex-basis: 50%;
+}
+
+#about .container .image{
+   flex-basis: 50%;
+}
+
+#about .container .image img{
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   object-fit: cover;
+   display: block;
+   margin: auto;
+   box-shadow: 2px 2px 5px gray;
+}
+
+/* SKILL STYLE */
+
+#skill .container{
+    display: flex;
+    align-items: center;
+}
+#skill .container > div{
+    flex-basis: 50%;
+}
+#skill .container .image img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#skill .container .content h2{
+    font-size: 22px;
+}
+
+
+#skill .container .content .skill-list{
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+#skill .container .content .skill-list .skill-item{
+    background-color: rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    
+}
+
+/* SERVICE STYLE */
+
+#service .container{
+    display: flex;
+    gap: 20px;
+
+}
+
+#service .container>div{
+    flex-basis: 33.3%;
+}
+
+#service .container .card-wrapper .card{
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: var(--main-color);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+#service .container .card-wrapper .card:hover{
+    transform: scale(1.03);
+}
+
+#service .container .card-wrapper .card svg, h3, p{
+    margin-bottom: 15px;
+}
+
+/* CONTACT STYLE */
+
+#contact .container{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#contact .container>div{
+    flex-basis: 50%;
+}
+
+#contact .container .content .contact-list{
+    list-style: none;
+   
+}
+
+#contact .container .content .contact-list .contact-item{
+    margin: 15px 0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+#contact .container .form-content .input-wrapper{
+    margin-bottom: 15px;
+}
+
+#contact .container .form-content .input-wrapper:first-child{
+    display: flex;
+    gap: 10px;
+}
+
+#contact .container .form-content .input-wrapper .input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    width: 100%;
+}
+
+#contact .btn{
+    border: none;
+    background-color: var(--main-color);
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+/* FOOTER STYLE */
+
+#footer{
+    background-color: var(--main-color );
+    padding: 50px 0;
+}
+
+#footer .container{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+#footer .container >div{
+  flex-basis: 33.3%;
+  text-align: center;
+  font-weight: bold;
+}
+
+#footer .container .link-list{
+    list-style: none;
+}
+
+#footer .container .link-list .link-item{
+    margin-bottom: 10px;
+}
+
+#footer .container .link-list .link-item a{
+    text-decoration: none;
+    color: black;
+}
+
+#footer .social-icons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+/* GO TO TOP */
+.go-to-top{
+    background-color: rgb(15, 105, 141);
+    width: 40px;
+    height: 50px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.go-to-top svg{
+    width: 30px;
+}
+
+/* RESPONSIVE */
+
+@media all and ( max-width: 767px){
+
+    /* COMMON STYLES */
+
+    .container{
+        width: 100%;
+    }
+
+    /* HERO STYLES */
+
+    #hero .container{
+        flex-direction: column;
+        height: 95vh;
+    }
+
+    #hero .container .content{
+        width: 100%;
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #hero .container .image{
+        width: 100%;
+        height: 350;
+        order: 1;
+    }
+
+    #hero .container .image img{
+        width: 100%;
+       height: 100%;
+    }
+
+    /* ABOUT STYLE */
+
+    #about .container{
+       flex-direction: column;
+       padding: 0 15px;
+       gap: 15px;
+    }
+
+    #about .container .content{
+        text-align: center;
+    }
+
+    /* SKILL STYLE */
+
+    #skill .container{
+        padding: 0 15px;
+        flex-direction: column;
+    }
+    
+    /* SERVICE STYLE */
+
+    #service .container{
+         flex-direction: column;
+         padding: 0 15px;
+         gap: 15px;
+    }
+
+    /* CONTACT STYLE */
+
+    #contact .container{
+         padding: 0 15px;
+        flex-direction: column;
+
+    }
+
+    /* FOOTER STYLE */
+
+
+    #footer .container{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+}
